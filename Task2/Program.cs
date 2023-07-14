@@ -25,6 +25,10 @@ int Ackerman(int num1, int num2)
   {
    return Ackerman(num1 - 1, Ackerman(num1, num2 - 1)); 
   }
+  else
+  {
+    System.Console.Write("Введенное значение не удовлетворяет требованиям задачи\n");
+  }
   return Ackerman(num1, num2);
 }
 
@@ -32,5 +36,4 @@ int num1 = ReadInt("Введите первое положительное чи�
 int num2 = ReadInt("Введите второе положительное число: ");
 System.Console.WriteLine();
 
-int result = Ackerman(num1, num2);
-System.Console.Write(result);
+System.Console.Write(Ackerman(num1, num2));
